@@ -13,7 +13,7 @@ app.get('/tasks/:id', (req, res) => {
     res.send( tasks[req.params.id])
 })
 
-app.put('/tasks', (req, res) => {
+app.post('/tasks', (req, res) => {
   
   tasks.push({title: req.body.title , description: req.body.description, completed : req.body.completed})
     res.send('task adicionada')
